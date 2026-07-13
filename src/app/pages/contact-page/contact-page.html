@@ -1,5 +1,6 @@
 <main class="mx-auto max-w-7xl px-5 pb-20 pt-32">
-  <section class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+  <!-- ENCABEZADO -->
+  <section class="mb-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
     <div>
       <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
         Contacto
@@ -8,79 +9,148 @@
       <h1 class="mt-4 text-4xl font-black leading-tight md:text-6xl">
         Hablemos sobre proyectos, prácticas o colaboración.
       </h1>
+    </div>
 
-      <p class="mt-6 text-lg leading-8 text-[var(--text-muted)]">
+    <div class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6">
+      <p class="leading-8 text-[var(--text-muted)]">
         Puedes escribirme para oportunidades de prácticas, proyectos académicos,
         colaboración en desarrollo web o propuestas relacionadas con tecnología.
       </p>
     </div>
-
-    <div class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-7">
-      <div class="grid gap-4">
-        <a
-          href="mailto:breinerdanieldurancardenas   @gmail.com"
-          class="rounded-3xl border border-[var(--border-soft)] bg-[var(--bg-soft)] p-5 hover:border-[var(--primary)]"
-        >
-          <p class="text-sm text-[var(--text-muted)]">
-            Correo
-          </p>
-
-          <p class="mt-2 font-bold">
-            breinerdanieldurancardenas&#64;gmail.com
-          </p>
-        </a>
-
-        <a
-          href="https://github.com/durancardenasbreinerdaniel-netizen"
-          target="_blank"
-          class="rounded-3xl border border-[var(--border-soft)] bg-[var(--bg-soft)] p-5 hover:border-[var(--primary)]"
-        >
-          <p class="text-sm text-[var(--text-muted)]">
-            GitHub
-          </p>
-
-          <p class="mt-2 font-bold">
-            Repositorios y proyectos
-          </p>
-        </a>
-
-        <a
-          href="https://www.linkedin.com/"
-          target="_blank"
-          class="rounded-3xl border border-[var(--border-soft)] bg-[var(--bg-soft)] p-5 hover:border-[var(--primary)]"
-        >
-          <p class="text-sm text-[var(--text-muted)]">
-            LinkedIn
-          </p>
-
-          <p class="mt-2 font-bold">
-            Perfil profesional
-          </p>
-        </a>
-      </div>
-    </div>
   </section>
 
-  <section class="mt-16 rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-7">
-    <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
-      Mensaje rápido
-    </p>
+  <!-- CONTENIDO PRINCIPAL -->
+  <section class="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+    <!-- INFORMACIÓN DE CONTACTO -->
+    <aside class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6 sm:p-8">
+      <div class="rounded-[1.7rem] bg-[var(--accent-soft)] p-6">
+        <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+          Información
+        </p>
 
-    <h2 class="mt-4 text-3xl font-black">
-      Enviar correo directamente
-    </h2>
+        <h2 class="mt-4 text-3xl font-black leading-tight">
+          Canales de contacto
+        </h2>
 
-    <p class="mt-4 max-w-2xl text-sm leading-7 text-[var(--text-muted)]">
-      Por ahora usaremos un enlace directo por correo. Más adelante podemos
-      reemplazar esto por un formulario real usando EmailJS, Formspree o una API
-      propia con Laravel.
-    </p>
+        <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+          Estos son los medios principales para contactarme o revisar mi trabajo.
+        </p>
+      </div>
 
-    <a
-      href="mailto:breinerduran91@gmail.com?subject=Contacto desde portafolio"
-      class="mt-6 inline-flex rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-bold text-white hover:bg-[var(--primary-strong)]"
-    >
-      Escribirme ahora
-    </a>
+      <div class="mt-6 grid gap-4">
+        @for (item of contactLinks; track item.label) {
+          <a
+            [href]="item.url"
+            target="_blank"
+            class="group min-w-0 rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--bg-soft)] p-5 hover:border-[var(--primary)]"
+          >
+            <div class="flex items-start gap-4">
+              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[var(--accent-soft)]">
+                {{ item.icon }}
+              </span>
+
+              <div class="min-w-0">
+                <p class="text-sm text-[var(--text-muted)]">
+                  {{ item.label }}
+                </p>
+
+                <p class="mt-1 break-words text-sm font-bold leading-6 text-[var(--text-main)]">
+                  {{ item.value }}
+                </p>
+              </div>
+            </div>
+          </a>
+        }
+      </div>
+    </aside>
+
+    <!-- FORMULARIO VISUAL -->
+    <section class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6 sm:p-8">
+      <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+        Mensaje
+      </p>
+
+      <h2 class="mt-4 text-3xl font-black">
+        Escribe tu mensaje
+      </h2>
+
+      <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+        Este formulario abrirá tu aplicación de correo con el mensaje preparado.
+        En una fase posterior podemos conectarlo a un servicio real de envío.
+      </p>
+
+      <form class="mt-8 grid gap-4">
+        <!-- Nombre y correo -->
+        <div class="grid gap-4 md:grid-cols-2">
+          <label class="grid gap-2">
+            <span class="text-sm font-semibold text-[var(--text-muted)]">
+              Tu nombre
+            </span>
+
+            <input
+              type="text"
+              name="name"
+              [(ngModel)]="name"
+              placeholder="Ej: Breiner Durán"
+              class="w-full rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-soft)] px-4 py-3 text-sm text-[var(--text-main)] outline-none placeholder:text-[var(--text-muted)] focus:border-[var(--primary)]"
+            />
+          </label>
+
+          <label class="grid gap-2">
+            <span class="text-sm font-semibold text-[var(--text-muted)]">
+              Tu correo
+            </span>
+
+            <input
+              type="email"
+              name="email"
+              [(ngModel)]="email"
+              placeholder="correo@ejemplo.com"
+              class="w-full rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-soft)] px-4 py-3 text-sm text-[var(--text-main)] outline-none placeholder:text-[var(--text-muted)] focus:border-[var(--primary)]"
+            />
+          </label>
+        </div>
+
+        <!-- Asunto -->
+        <label class="grid gap-2">
+          <span class="text-sm font-semibold text-[var(--text-muted)]">
+            Asunto
+          </span>
+
+          <input
+            type="text"
+            name="subject"
+            [(ngModel)]="subject"
+            placeholder="Ej: Oportunidad de prácticas"
+            class="w-full rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-soft)] px-4 py-3 text-sm text-[var(--text-main)] outline-none placeholder:text-[var(--text-muted)] focus:border-[var(--primary)]"
+          />
+        </label>
+
+        <!-- Bloque de escritura -->
+        <label class="grid gap-2">
+          <span class="text-sm font-semibold text-[var(--text-muted)]">
+            Mensaje
+          </span>
+
+          <textarea
+            name="message"
+            [(ngModel)]="message"
+            rows="8"
+            placeholder="Escribe aquí tu mensaje..."
+            class="min-h-52 w-full resize-y rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-soft)] px-4 py-3 text-sm leading-7 text-[var(--text-main)] outline-none placeholder:text-[var(--text-muted)] focus:border-[var(--primary)]"
+          ></textarea>
+        </label>
+
+        <!-- Botón -->
+        <div class="pt-2">
+          <a
+            [href]="buildMailtoLink()"
+            class="inline-flex w-full justify-center rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-bold text-white shadow-[var(--shadow-glow)] hover:bg-[var(--primary-strong)] sm:w-auto"
+          >
+            Enviar mensaje
+          </a>
+        </div>
+      </form>
+    </section>
   </section>
 </main>

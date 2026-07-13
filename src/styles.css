@@ -71,3 +71,69 @@ body {
     color 180ms ease,
     box-shadow 180ms ease;
 }
+
+/*
+  Elementos visuales reutilizables del portafolio.
+
+  Los usamos para acercarnos al estilo creativo de referencia sin depender
+  de imágenes ni sobrecargar cada componente con demasiado CSS.
+*/
+
+.portfolio-background {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(167, 139, 250, 0.22), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(240, 171, 252, 0.14), transparent 26%),
+    radial-gradient(circle at 50% 95%, rgba(139, 92, 246, 0.14), transparent 34%),
+    var(--bg-main);
+}
+
+.visual-grid {
+  background-image:
+    linear-gradient(var(--border-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.18;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-soft), var(--accent), var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-card {
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
+  box-shadow: var(--shadow-glow);
+  backdrop-filter: blur(18px);
+}
+
+.soft-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-soft),
+    transparent
+  );
+}
+
+.decorative-orbit {
+  position: absolute;
+  border: 1px solid var(--border-soft);
+  border-radius: 9999px;
+  transform: rotate(-18deg);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.decorative-dot {
+  position: absolute;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 9999px;
+  background: var(--primary);
+  box-shadow: 0 0 22px var(--primary);
+}

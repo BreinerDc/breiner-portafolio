@@ -1,104 +1,184 @@
 
 <main class="overflow-hidden">
-  <!-- HERO PRINCIPAL -->
-  <section class="relative mx-auto flex min-h-screen max-w-7xl items-center px-5 pb-16 pt-28">
-    <div class="absolute left-1/2 top-20 -z-10 h-80 w-80 -translate-x-1/2 rounded-full bg-[var(--primary)]/20 blur-3xl"></div>
-    <div class="absolute right-10 top-48 -z-10 h-64 w-64 rounded-full bg-[var(--accent)]/15 blur-3xl"></div>
+<!-- HERO PRINCIPAL -->
+<section class="relative mx-auto min-h-screen max-w-7xl overflow-hidden px-5 pb-16 pt-32">
+  <div class="visual-grid absolute inset-0 -z-10"></div>
 
-    <div class="grid w-full items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-      <div>
-        <div class="mb-6 inline-flex rounded-full border border-[var(--border-soft)] bg-[var(--surface)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-          Desarrollador Web
-        </div>
+  <div class="decorative-orbit right-10 top-32 hidden h-72 w-72 lg:block"></div>
+  <div class="decorative-orbit right-24 top-40 hidden h-96 w-96 lg:block"></div>
+  <span class="decorative-dot left-8 top-40"></span>
+  <span class="decorative-dot bottom-28 right-16"></span>
 
-        <h1 class="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight md:text-7xl lg:text-8xl">
-          Construyo
-          <span class="text-[var(--primary)]">experiencias</span>
-          digitales modernas.
-        </h1>
-
-        <p class="mt-7 max-w-2xl text-lg leading-8 text-[var(--text-muted)]">
-          Soy estudiante de Ingeniería de Sistemas enfocado en desarrollo web,
-          aplicaciones empresariales, backend con Laravel, bases de datos MySQL
-          y frontend moderno con Angular.
-        </p>
-
-        <div class="mt-9 flex flex-col gap-4 sm:flex-row">
-          <a
-            routerLink="/proyectos"
-            class="rounded-full bg-[var(--primary)] px-6 py-3 text-center text-sm font-bold text-white shadow-[var(--shadow-glow)] hover:bg-[var(--primary-strong)]"
-          >
-            Ver proyectos
-          </a>
-
-          <a
-            href="/cv-breiner-duran.pdf"
-            class="rounded-full border border-[var(--border-soft)] px-6 py-3 text-center text-sm font-bold text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
-          >
-            Descargar CV
-          </a>
-        </div>
-
-        <div class="mt-12 grid max-w-xl grid-cols-3 gap-4">
-          <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-4">
-            <p class="text-2xl font-black text-[var(--primary)]">Web</p>
-            <p class="mt-1 text-xs text-[var(--text-muted)]">Área principal</p>
-          </div>
-
-          <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-4">
-            <p class="text-2xl font-black text-[var(--primary)]">Full</p>
-            <p class="mt-1 text-xs text-[var(--text-muted)]">Enfoque stack</p>
-          </div>
-
-          <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-4">
-            <p class="text-2xl font-black text-[var(--primary)]">SQL</p>
-            <p class="mt-1 text-xs text-[var(--text-muted)]">Base de datos</p>
-          </div>
-        </div>
+  <div class="grid min-h-[calc(100vh-8rem)] items-center gap-14 lg:grid-cols-[1.08fr_0.92fr]">
+    <!-- Texto principal -->
+    <div>
+      <div class="mb-7 inline-flex rounded-full border border-[var(--border-soft)] bg-[var(--surface)] px-4 py-2 text-xs font-bold uppercase tracking-[0.32em] text-[var(--primary)]">
+        Desarrollador web
       </div>
 
-      <!-- TARJETA VISUAL DERECHA -->
-      <div class="relative mx-auto w-full max-w-md">
-        <div class="absolute -inset-6 rounded-[3rem] bg-[var(--primary)]/20 blur-3xl"></div>
+      <h1 class="max-w-5xl text-5xl font-black uppercase leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
+        Construyo
+        <span class="gradient-text block">experiencias</span>
+        digitales modernas.
+      </h1>
 
-        <div class="relative rounded-[2.5rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6 shadow-[var(--shadow-glow)] backdrop-blur">
-          <div class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--bg-soft)] p-6">
-            <div class="mb-10 flex items-center justify-between">
-              <div>
-                <p class="text-xs uppercase tracking-[0.28em] text-[var(--primary)]">
-                  Portfolio
-                </p>
-                <h2 class="mt-2 text-3xl font-black">
-                  Breiner Durán
-                </h2>
-              </div>
+      <p class="mt-8 max-w-2xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+        Soy estudiante de Ingeniería de Sistemas enfocado en desarrollo web,
+        aplicaciones empresariales, backend con Laravel, bases de datos MySQL
+        y frontend moderno con Angular.
+      </p>
 
-              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--accent-soft)] text-xl font-black text-[var(--primary)]">
-                &lt;/&gt;
-              </div>
-            </div>
+      <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+        <a
+          href="#proyectos"
+          class="rounded-full bg-[var(--primary)] px-7 py-3 text-center text-sm font-black text-white shadow-[var(--shadow-glow)] hover:bg-[var(--primary-strong)]"
+        >
+          Ver proyectos
+        </a>
 
-            <div class="space-y-4">
-              <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5">
-                <p class="text-sm text-[var(--text-muted)]">Frontend</p>
-                <p class="mt-1 text-xl font-bold">Angular + Tailwind</p>
-              </div>
+        <a
+          href="/cv-breiner-duran.pdf"
+          class="rounded-full border border-[var(--border-soft)] px-7 py-3 text-center text-sm font-black text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
+        >
+          Descargar CV
+        </a>
+      </div>
 
-              <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5">
-                <p class="text-sm text-[var(--text-muted)]">Backend</p>
-                <p class="mt-1 text-xl font-bold">Laravel + MySQL</p>
-              </div>
+      <!-- Datos resumidos sin porcentajes -->
+      <div class="mt-12 grid max-w-2xl gap-4 sm:grid-cols-3">
+        <article class="rounded-[1.7rem] border border-[var(--border-soft)] bg-[var(--surface)] p-5">
+          <p class="text-2xl font-black text-[var(--primary)]">Web</p>
+          <p class="mt-2 text-xs leading-5 text-[var(--text-muted)]">
+            Área principal
+          </p>
+        </article>
 
-              <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5">
-                <p class="text-sm text-[var(--text-muted)]">Nivel general</p>
-                <p class="mt-1 text-xl font-bold text-[var(--primary)]">Intermedio</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <article class="rounded-[1.7rem] border border-[var(--border-soft)] bg-[var(--surface)] p-5">
+          <p class="text-2xl font-black text-[var(--primary)]">Full</p>
+          <p class="mt-2 text-xs leading-5 text-[var(--text-muted)]">
+            Enfoque stack
+          </p>
+        </article>
+
+        <article class="rounded-[1.7rem] border border-[var(--border-soft)] bg-[var(--surface)] p-5">
+          <p class="text-2xl font-black text-[var(--primary)]">SQL</p>
+          <p class="mt-2 text-xs leading-5 text-[var(--text-muted)]">
+            Base de datos
+          </p>
+        </article>
       </div>
     </div>
-  </section>
+
+    <!-- Tarjeta visual derecha -->
+    <aside class="relative mx-auto w-full max-w-md">
+      <div class="absolute -inset-8 rounded-full bg-[var(--primary)]/20 blur-3xl"></div>
+
+      <div class="glass-card relative rounded-[2.5rem] p-6">
+        <div class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--bg-soft)] p-6">
+          <div class="flex items-start justify-between gap-6">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+                Portfolio
+              </p>
+
+              <h2 class="mt-3 text-3xl font-black">
+                Breiner Durán
+              </h2>
+
+              <p class="mt-2 text-sm text-[var(--text-muted)]">
+                Angular · Laravel · MySQL
+              </p>
+            </div>
+
+            <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--accent-soft)] text-xl font-black text-[var(--primary)]">
+              &lt;/&gt;
+            </div>
+          </div>
+
+          <div class="soft-divider my-7"></div>
+
+          <div class="space-y-4">
+            <div class="rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--surface)] p-5">
+              <p class="text-sm text-[var(--text-muted)]">Frontend</p>
+              <p class="mt-1 text-xl font-black">Angular + Tailwind</p>
+              <p class="mt-2 text-xs font-bold text-[var(--primary)]">
+                Nivel intermedio
+              </p>
+            </div>
+
+            <div class="rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--surface)] p-5">
+              <p class="text-sm text-[var(--text-muted)]">Backend</p>
+              <p class="mt-1 text-xl font-black">Laravel + PHP</p>
+              <p class="mt-2 text-xs font-bold text-[var(--primary)]">
+                Nivel intermedio
+              </p>
+            </div>
+
+            <div class="rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--surface)] p-5">
+              <p class="text-sm text-[var(--text-muted)]">Bases de datos</p>
+              <p class="mt-1 text-xl font-black">MySQL</p>
+              <p class="mt-2 text-xs font-bold text-[var(--primary)]">
+                Nivel intermedio
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ENFOQUE RESUMIDO -->
+<section class="mx-auto max-w-7xl px-5 pb-20">
+  <div class="soft-divider mb-10"></div>
+
+  <div class="grid gap-5 md:grid-cols-3">
+    <article class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6">
+      <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+        01
+      </p>
+
+      <h2 class="mt-5 text-2xl font-black">
+        Diseño web
+      </h2>
+
+      <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+        Interfaces limpias, responsivas y enfocadas en una experiencia clara
+        para el usuario.
+      </p>
+    </article>
+
+    <article class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6">
+      <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+        02
+      </p>
+
+      <h2 class="mt-5 text-2xl font-black">
+        Desarrollo web
+      </h2>
+
+      <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+        Construcción de aplicaciones con Angular, Laravel, PHP, TypeScript
+        y bases de datos.
+      </p>
+    </article>
+
+    <article class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6">
+      <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+        03
+      </p>
+
+      <h2 class="mt-5 text-2xl font-black">
+        Optimización
+      </h2>
+
+      <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+        Organización del código, mejora visual, estructura mantenible y buenas
+        prácticas de desarrollo.
+      </p>
+    </article>
+  </div>
+</section>
 
   <!-- STACK TECNOLÓGICO -->
   <section id="stack" class="mx-auto max-w-7xl px-5 py-20">
@@ -205,67 +285,46 @@
     </div>
   </section>
 
-  <!-- CONTACTO RESUMIDO -->
+<!-- CONTACTO RESUMIDO -->
 <section id="contacto" class="mx-auto max-w-7xl px-5 py-20">
   <div
-    class="overflow-hidden rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] shadow-[var(--shadow-glow)]"
+    class="grid gap-0 overflow-hidden rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] shadow-[var(--shadow-glow)] lg:grid-cols-[0.95fr_1.05fr]"
   >
-    <div class="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
-      <!-- Bloque principal de contacto -->
-      <div class="bg-[var(--accent-soft)] p-7 sm:p-10">
-        <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
-          Contacto
-        </p>
+    <div class="bg-[var(--accent-soft)] p-7 sm:p-10">
+      <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+        Contacto
+      </p>
 
-        <h2 class="mt-4 max-w-xl text-3xl font-black leading-tight md:text-5xl">
-          Construyamos algo profesional.
-        </h2>
+      <h2 class="mt-4 max-w-xl text-3xl font-black leading-tight md:text-5xl">
+        Construyamos algo profesional.
+      </h2>
 
-        <p class="mt-5 max-w-xl text-sm leading-7 text-[var(--text-muted)]">
-          Estoy abierto a prácticas, proyectos académicos, colaboraciones y
-          oportunidades relacionadas con desarrollo web.
-        </p>
-      </div>
+      <p class="mt-5 max-w-xl text-sm leading-7 text-[var(--text-muted)]">
+        Estoy abierto a prácticas, proyectos académicos, colaboraciones y
+        oportunidades relacionadas con desarrollo web.
+      </p>
+    </div>
 
-      <!-- Datos de contacto -->
-      <div class="p-6 sm:p-8 lg:p-10">
-        <div class="grid gap-4">
-          <a
-            href="mailto:breinerdanieldurancardenas@gmail.com"
-            class="group min-w-0 rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--bg-soft)] p-5 hover:border-[var(--primary)]"
-          >
-            <p class="text-sm text-[var(--text-muted)]">
-              Correo
-            </p>
+    <div class="flex flex-col justify-center p-7 sm:p-10">
+      <p class="text-sm leading-7 text-[var(--text-muted)]">
+        Para mantener la vista principal limpia, el formulario completo está en
+        una página separada.
+      </p>
 
-            <p class="mt-2 break-words text-sm font-bold leading-6 text-[var(--text-main)] sm:text-base">
-              breinerdanieldurancardenas&#64;gmail.com
-            </p>
-          </a>
+      <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+        <a
+          routerLink="/contacto"
+          class="inline-flex justify-center rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-bold text-white hover:bg-[var(--primary-strong)]"
+        >
+          Ir a contacto
+        </a>
 
-          <a
-            href="https://github.com/"
-            target="_blank"
-            class="group rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--bg-soft)] p-5 hover:border-[var(--primary)]"
-          >
-            <p class="text-sm text-[var(--text-muted)]">
-              GitHub
-            </p>
-
-            <p class="mt-2 text-base font-bold text-[var(--text-main)]">
-              Ver repositorios
-            </p>
-          </a>
-        </div>
-
-        <div class="mt-6">
-          <a
-            href="mailto:breinerdanieldurancardenas@gmail.com"
-            class="inline-flex w-full justify-center rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-bold text-white hover:bg-[var(--primary-strong)] sm:w-auto"
-          >
-            Enviar mensaje
-          </a>
-        </div>
+        <a
+          href="mailto:breinerdanieldurancardenas@gmail.com"
+          class="inline-flex justify-center rounded-full border border-[var(--border-soft)] px-6 py-3 text-sm font-bold hover:border-[var(--primary)] hover:text-[var(--primary)]"
+        >
+          Correo directo
+        </a>
       </div>
     </div>
   </div>
