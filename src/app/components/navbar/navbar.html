@@ -1,58 +1,115 @@
-<header class="fixed left-0 top-0 z-50 w-full border-b border-[var(--border-soft)] bg-[var(--bg-main)]/85 backdrop-blur-xl">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-        <a routerLink="/" class="flex items-center gap-3">
-            <span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-[var(--accent-soft)] text-lg font-black text-[var(--primary)]">
-                BD
-            </span>
+<header class="fixed left-0 top-0 z-50 w-full border-b border-[var(--border-soft)] bg-[var(--bg-main)]/90 backdrop-blur-xl">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+    <!-- LOGO -->
+    <a routerLink="/" class="flex items-center gap-3" (click)="closeMobileMenu()">
+      <span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-[var(--accent-soft)] text-lg font-black text-[var(--primary)]">
+        BD
+      </span>
 
-            <span class="text-sm font-semibold tracking-wide">
-                Breiner Durán
-            </span>
-        </a>
+      <span class="text-sm font-semibold tracking-wide">
+        Breiner Durán
+      </span>
+    </a>
 
+    <!-- MENÚ DE ESCRITORIO -->
     <div class="hidden items-center gap-8 text-sm font-medium text-[var(--text-muted)] md:flex">
-        <a routerLink="/" class="hover:text-[var(--primary)]">
+      <a routerLink="/" class="hover:text-[var(--primary)]">
+        Inicio
+      </a>
 
-            Inicio
-        
-        </a>
-        
-        <a routerLink="/sobre-mi" class="hover:text-[var(--primary)]">
-            
-            Sobre mi
-        
-        </a>
+      <a routerLink="/sobre-mi" class="hover:text-[var(--primary)]">
+        Sobre mí
+      </a>
 
-        <a routerLink="/tecnologias" class="hover:text-[var(--primary)]">
-            
-            Tecnologias
-        
-        </a>
-        
-        <a routerLink="/proyectos" class="hover:text-[var(--primary)]">
-            
-            Proyectos
-        
-        </a>
-        
-        <a routerLink="/contacto" class="hover:text-[var(--primary)]">
-            
-            Contacto
-        
-        </a>
+      <a routerLink="/tecnologias" class="hover:text-[var(--primary)]">
+        Tecnologías
+      </a>
+
+      <a routerLink="/proyectos" class="hover:text-[var(--primary)]">
+        Proyectos
+      </a>
+
+      <a routerLink="/contacto" class="hover:text-[var(--primary)]">
+        Contacto
+      </a>
     </div>
 
-        <div class="flex items-center gap-3">
-            <app-theme-toggle />
-        
-            <a
-                routerLink="/contacto"
-                class="hidden rounded-full border border-[var(--border-soft)] px-4 py-2 text-sm font-semibold text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)] sm:inline-flex"
-            >
-                
-                Hablemos
-            
-            </a>
-        </div>
-    </nav>
+    <!-- ACCIONES DERECHA -->
+    <div class="flex items-center gap-3">
+      <app-theme-toggle />
+
+      <a
+        routerLink="/contacto"
+        class="hidden rounded-full border border-[var(--border-soft)] px-4 py-2 text-sm font-semibold text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)] sm:inline-flex"
+      >
+        Hablemos
+      </a>
+
+      <!-- BOTÓN HAMBURGUESA MÓVIL -->
+      <button
+        type="button"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-soft)] bg-[var(--surface)] text-[var(--text-main)] hover:bg-[var(--surface-strong)] md:hidden"
+        aria-label="Abrir menú de navegación"
+        [attr.aria-expanded]="mobileMenuIsOpen()"
+        (click)="toggleMobileMenu()"
+      >
+        @if (mobileMenuIsOpen()) {
+          <span class="text-xl leading-none">✕</span>
+        } @else {
+          <span class="flex flex-col gap-1.5">
+            <span class="block h-0.5 w-5 rounded-full bg-[var(--text-main)]"></span>
+            <span class="block h-0.5 w-5 rounded-full bg-[var(--text-main)]"></span>
+            <span class="block h-0.5 w-5 rounded-full bg-[var(--text-main)]"></span>
+          </span>
+        }
+      </button>
+    </div>
+  </nav>
+
+  <!-- MENÚ MÓVIL -->
+  @if (mobileMenuIsOpen()) {
+    <div class="border-t border-[var(--border-soft)] bg-[var(--bg-main)]/95 px-5 py-5 shadow-[var(--shadow-glow)] backdrop-blur-xl md:hidden">
+      <div class="mx-auto grid max-w-7xl gap-3">
+        <a
+          routerLink="/"
+          class="rounded-2xl border border-[var(--border-soft)] bg-[var(--surface)] px-5 py-4 text-sm font-bold text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
+          (click)="closeMobileMenu()"
+        >
+          Inicio
+        </a>
+
+        <a
+          routerLink="/sobre-mi"
+          class="rounded-2xl border border-[var(--border-soft)] bg-[var(--surface)] px-5 py-4 text-sm font-bold text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
+          (click)="closeMobileMenu()"
+        >
+          Sobre mí
+        </a>
+
+        <a
+          routerLink="/tecnologias"
+          class="rounded-2xl border border-[var(--border-soft)] bg-[var(--surface)] px-5 py-4 text-sm font-bold text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
+          (click)="closeMobileMenu()"
+        >
+          Tecnologías
+        </a>
+
+        <a
+          routerLink="/proyectos"
+          class="rounded-2xl border border-[var(--border-soft)] bg-[var(--surface)] px-5 py-4 text-sm font-bold text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
+          (click)="closeMobileMenu()"
+        >
+          Proyectos
+        </a>
+
+        <a
+          routerLink="/contacto"
+          class="rounded-2xl bg-[var(--primary)] px-5 py-4 text-center text-sm font-bold text-white hover:bg-[var(--primary-strong)]"
+          (click)="closeMobileMenu()"
+        >
+          Contacto
+        </a>
+      </div>
+    </div>
+  }
 </header>
