@@ -1,0 +1,129 @@
+<main class="mx-auto max-w-7xl px-5 pb-20 pt-32">
+  @if (project) {
+    <section class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+      <div>
+        <a
+          routerLink="/proyectos"
+          class="mb-8 inline-flex rounded-full border border-[var(--border-soft)] px-5 py-3 text-sm font-bold text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
+        >
+          ← Volver a proyectos
+        </a>
+
+        <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+          {{ project.type }}
+        </p>
+
+        <h1 class="mt-4 text-4xl font-black leading-tight md:text-6xl">
+          {{ project.title }}
+        </h1>
+
+        <p class="mt-6 text-lg leading-8 text-[var(--text-muted)]">
+          {{ project.longDescription }}
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <span class="rounded-full bg-[var(--accent-soft)] px-4 py-2 text-xs font-bold text-[var(--primary)]">
+            {{ project.status }}
+          </span>
+
+          @for (technology of project.technologies; track technology) {
+            <span class="rounded-full border border-[var(--border-soft)] px-4 py-2 text-xs font-bold text-[var(--text-muted)]">
+              {{ technology }}
+            </span>
+          }
+        </div>
+      </div>
+
+      <aside class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6">
+        <div class="flex min-h-80 items-center justify-center rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--bg-soft)]">
+          <span class="text-7xl font-black text-[var(--primary)]">
+            {{ project.title.charAt(0) }}
+          </span>
+        </div>
+
+        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+          @for (link of project.links; track link.label) {
+            <a
+              [href]="link.url"
+              target="_blank"
+              class="rounded-full border border-[var(--border-soft)] px-5 py-3 text-center text-sm font-bold hover:border-[var(--primary)] hover:text-[var(--primary)]"
+            >
+              {{ link.label }}
+            </a>
+          }
+        </div>
+      </aside>
+    </section>
+
+    <section class="mt-16 grid gap-6 lg:grid-cols-2">
+      <article class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-7">
+        <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+          Problema
+        </p>
+
+        <h2 class="mt-4 text-2xl font-black">
+          Qué necesidad resuelve
+        </h2>
+
+        <p class="mt-4 leading-8 text-[var(--text-muted)]">
+          {{ project.problem }}
+        </p>
+      </article>
+
+      <article class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-7">
+        <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+          Solución
+        </p>
+
+        <h2 class="mt-4 text-2xl font-black">
+          Cómo se abordó
+        </h2>
+
+        <p class="mt-4 leading-8 text-[var(--text-muted)]">
+          {{ project.solution }}
+        </p>
+      </article>
+    </section>
+
+    <section class="mt-16 rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-7">
+      <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+        Aprendizajes
+      </p>
+
+      <h2 class="mt-4 text-3xl font-black">
+        Qué fortalecí con este proyecto
+      </h2>
+
+      <div class="mt-7 grid gap-4 md:grid-cols-2">
+        @for (learning of project.learnings; track learning) {
+          <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--bg-soft)] p-5">
+            <p class="text-sm leading-7 text-[var(--text-muted)]">
+              {{ learning }}
+            </p>
+          </div>
+        }
+      </div>
+    </section>
+  } @else {
+    <section class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-8">
+      <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+        Proyecto no encontrado
+      </p>
+
+      <h1 class="mt-4 text-4xl font-black">
+        No encontramos este proyecto.
+      </h1>
+
+      <p class="mt-4 text-[var(--text-muted)]">
+        Es posible que el enlace sea incorrecto o que el proyecto haya sido movido.
+      </p>
+
+      <a
+        routerLink="/proyectos"
+        class="mt-7 inline-flex rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-bold text-white hover:bg-[var(--primary-strong)]"
+      >
+        Volver a proyectos
+      </a>
+    </section>
+  }
+</main>

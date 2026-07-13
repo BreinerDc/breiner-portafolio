@@ -4,50 +4,47 @@ import { AboutPage } from './pages/about-page/about-page';
 import { ProjectsPage } from './pages/projects-page/projects-page';
 import { ContactPage } from './pages/contact-page/contact-page';
 import { TechnologiesPage } from './pages/technologies-page/technologies-page';
-/**
- * Mantenemos la vista principal limpia
- * 
- * Mas adelante agregamos:
- * /proyectos
- * /sobre-mi
- * /contacto
- * 
- * La pagina  de inicio solo mostrara lo mas importante
- */
+import { ProjectDetailPage } from './pages/project-detail-page/project-detail-page';
 
+/*
+  Las rutas organizan las vistas del portafolio.
+
+  /proyectos muestra el listado completo.
+  /proyectos/:slug muestra el detalle de un proyecto específico.
+*/
 export const routes: Routes = [
-    {
-        path: '',
-        component: Home,
-        title: 'Breiner Duran | Portafolio',
-    },
-
-    {
-        path: 'sobre-mi',
-        component: AboutPage,
-        title: 'Sobre mi | Breiner Duran',
-    },
-
-    {
-        path: 'tecnologias',
-        component: TechnologiesPage,
-        title: 'Tecnologias | Breiner Duran',
-    },
-
-    {
-        path: 'proyectos',
-        component: ProjectsPage,
-        title: 'Mis proyectos | Breiner Duran',
-    },
-
-    {
-        path: 'contacto',
-        component: ContactPage,
-        title: 'Contacto | Breiner Duran',
-    },
-
-    {
-        path: '**',
-        redirectTo: '',
-    }
+  {
+    path: '',
+    component: Home,
+    title: 'Breiner Durán | Portafolio',
+  },
+  {
+    path: 'sobre-mi',
+    component: AboutPage,
+    title: 'Sobre mí | Breiner Durán',
+  },
+  {
+    path: 'tecnologias',
+    component: TechnologiesPage,
+    title: 'Tecnologías | Breiner Durán',
+  },
+  {
+    path: 'proyectos',
+    component: ProjectsPage,
+    title: 'Proyectos | Breiner Durán',
+  },
+  {
+    path: 'proyectos/:slug',
+    component: ProjectDetailPage,
+    title: 'Detalle de proyecto | Breiner Durán',
+  },
+  {
+    path: 'contacto',
+    component: ContactPage,
+    title: 'Contacto | Breiner Durán',
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];

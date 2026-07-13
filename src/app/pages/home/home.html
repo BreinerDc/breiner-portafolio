@@ -193,58 +193,80 @@
               </span>
             }
           </div>
+
+          <a
+            [routerLink]="['/proyectos', project.slug]"
+            class="mt-6 inline-flex rounded-full border border-[var(--border-soft)] px-5 py-3 text-sm font-bold hover:border-[var(--primary)] hover:text-[var(--primary)]"
+          >
+            Ver detalle
+          </a>
         </article>
       }
     </div>
   </section>
 
   <!-- CONTACTO RESUMIDO -->
-  <section id="contacto" class="mx-auto max-w-7xl px-5 py-20">
-    <div class="grid overflow-hidden rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] md:grid-cols-[0.8fr_1.2fr]">
-      <div class="bg-[var(--accent-soft)] p-8 md:p-10">
+<section id="contacto" class="mx-auto max-w-7xl px-5 py-20">
+  <div
+    class="overflow-hidden rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] shadow-[var(--shadow-glow)]"
+  >
+    <div class="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+      <!-- Bloque principal de contacto -->
+      <div class="bg-[var(--accent-soft)] p-7 sm:p-10">
         <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
           Contacto
         </p>
 
-        <h2 class="mt-4 text-3xl font-black md:text-5xl">
+        <h2 class="mt-4 max-w-xl text-3xl font-black leading-tight md:text-5xl">
           Construyamos algo profesional.
         </h2>
 
-        <p class="mt-5 text-sm leading-7 text-[var(--text-muted)]">
+        <p class="mt-5 max-w-xl text-sm leading-7 text-[var(--text-muted)]">
           Estoy abierto a prácticas, proyectos académicos, colaboraciones y
           oportunidades relacionadas con desarrollo web.
         </p>
       </div>
 
-      <div class="p-8 md:p-8">
-        <div class="grid gap-4 md:grid-cols-2">
+      <!-- Datos de contacto -->
+      <div class="p-6 sm:p-8 lg:p-10">
+        <div class="grid gap-4">
           <a
             href="mailto:breinerdanieldurancardenas@gmail.com"
-            class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5 hover:border-[var(--primary)]"
+            class="group min-w-0 rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--bg-soft)] p-5 hover:border-[var(--primary)]"
           >
-            <p class="text-sm text-[var(--text-muted)]">Correo</p>
-            <p class="mt-2 font-bold">breinerdanieldurancardenas&#64;gmail.com</p>
+            <p class="text-sm text-[var(--text-muted)]">
+              Correo
+            </p>
+
+            <p class="mt-2 break-words text-sm font-bold leading-6 text-[var(--text-main)] sm:text-base">
+              breinerdanieldurancardenas&#64;gmail.com
+            </p>
           </a>
 
           <a
             href="https://github.com/"
             target="_blank"
-            class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5 hover:border-[var(--primary)]"
+            class="group rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--bg-soft)] p-5 hover:border-[var(--primary)]"
           >
-            <p class="text-sm text-[var(--text-muted)]">GitHub</p>
-            <p class="mt-2 font-bold">Ver repositorios</p>
+            <p class="text-sm text-[var(--text-muted)]">
+              GitHub
+            </p>
+
+            <p class="mt-2 text-base font-bold text-[var(--text-main)]">
+              Ver repositorios
+            </p>
           </a>
         </div>
 
         <div class="mt-6">
           <a
-            href="mailto:breinerduran91@gmail.com"
-            class="inline-flex rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-bold text-white hover:bg-[var(--primary-strong)]"
+            href="mailto:breinerdanieldurancardenas@gmail.com"
+            class="inline-flex w-full justify-center rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-bold text-white hover:bg-[var(--primary-strong)] sm:w-auto"
           >
             Enviar mensaje
           </a>
         </div>
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>

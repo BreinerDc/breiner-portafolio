@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { technologies } from '../../data/technologies.data';
-import { featuredProjects } from '../../data/projects.data';
+import { projects } from '../../data/projects.data';
 
 @Component({
   selector: 'app-home',
@@ -22,8 +22,8 @@ export class Home {
   /**
    * En el inicio solo aparecen los projectos destacados 
    * 
-   * la lista completa aparecera en /proyectos
+   * la lista completa aparecera en /projects
    */
 
-  protected readonly projects = featuredProjects;
+  protected readonly projects = projects;
 }

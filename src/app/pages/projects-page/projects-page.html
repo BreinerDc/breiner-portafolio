@@ -5,19 +5,19 @@
     </p>
 
     <h1 class="mt-4 text-4xl font-black leading-tight md:text-6xl">
-      Proyectos que muestran mi proceso de aprendizaje y desarrollo.
+      Proyectos que muestran mi proceso de desarrollo.
     </h1>
 
     <p class="mt-6 text-lg leading-8 text-[var(--text-muted)]">
-      Esta sección contiene proyectos destacados con más contexto técnico.
-      La idea no es solo mostrar el resultado, sino también explicar qué problema
-      resuelve cada proyecto y qué tecnologías se usaron.
+      Aquí presento proyectos con más contexto técnico. Cada proyecto tiene una
+      vista individual donde explico el problema, la solución, las tecnologías y
+      los aprendizajes obtenidos.
     </p>
   </section>
 
   <section class="grid gap-6">
-    @for (project of projects; track project.title) {
-      <article class="grid gap-6 rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6 lg:grid-cols-[0.7fr_1.3fr]">
+    @for (project of projects; track project.slug) {
+      <article class="grid gap-6 rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6 hover:border-[var(--primary)] lg:grid-cols-[0.7fr_1.3fr]">
         <div class="flex min-h-64 items-center justify-center rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--bg-soft)]">
           <span class="text-6xl font-black text-[var(--primary)]">
             {{ project.title.charAt(0) }}
@@ -49,6 +49,15 @@
                 {{ technology }}
               </span>
             }
+          </div>
+
+          <div class="mt-7">
+            <a
+              [routerLink]="['/proyectos', project.slug]"
+              class="inline-flex rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-bold text-white hover:bg-[var(--primary-strong)]"
+            >
+              Ver detalle
+            </a>
           </div>
         </div>
       </article>

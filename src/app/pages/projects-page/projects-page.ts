@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
-import { featuredProjects } from '../../data/projects.data';
+import { RouterLink } from '@angular/router';
+import { projects } from '../../data/projects.data';
 
 @Component({
   selector: 'app-projects-page',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './projects-page.html',
   styleUrl: './projects-page.css',
 })
 export class ProjectsPage {
   /*
-    Aquí mostramos todos los proyectos disponibles.
+    Aquí mostramos todos los proyectos.
 
-    Más adelante, si el portafolio crece, este arreglo podría venir
-    desde una API o un archivo JSON.
+    La página principal solo muestra destacados,
+    pero esta vista permite ver el listado completo.
   */
-
-    protected readonly projects = featuredProjects;
+  protected readonly projects = projects;
 }
