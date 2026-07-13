@@ -1,0 +1,52 @@
+<header class="fixed left-0 top-0 z-50 w-full border-b border-[var(--border-soft)] bg-[var(--bg-main)]/85 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+        <a routerLink="/" class="flex items-center gap-3">
+            <span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-[var(--accent-soft)] text-lg font-black text-[var(--primary)]">
+                BD
+            </span>
+
+            <span class="text-sm font-semibold tracking-wide">
+                Breiner Durán
+            </span>
+        </a>
+
+    <div class="hidden items-center gap-8 text-sm font-medium text-[var(--text-muted)] md:flex">
+        <a routerLink="/" class="hover:text-[var(--primary)]">
+
+            Inicio
+        
+        </a>
+        
+        <a routerLink="/sobre-mi" class="hover:text-[var(--primary)]">
+            
+            Sobre mi
+        
+        </a>
+        
+        <a routerLink="/proyectos" class="hover:text-[var(--primary)]">
+            
+            Proyectos
+        
+        </a>
+        
+        <a routerLink="/contacto" class="hover:text-[var(--primary)]">
+            
+            Contacto
+        
+        </a>
+    </div>
+
+        <div class="flex items-center gap-3">
+            <app-theme-toggle />
+        
+            <a
+                routerLink="/contacto"
+                class="hidden rounded-full border border-[var(--border-soft)] px-4 py-2 text-sm font-semibold text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)] sm:inline-flex"
+            >
+                
+                Hablemos
+            
+            </a>
+        </div>
+    </nav>
+</header>

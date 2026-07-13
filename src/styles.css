@@ -1,3 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import "devicon/devicon.min.css";
 
-@import 'tailwindcss';
+/*
+  Variables globales del portafolio.
+
+  Usamos variables CSS para poder cambiar fácilmente entre modo oscuro
+  y modo claro sin duplicar clases en todos los componentes.
+*/
+
+:root,
+html[data-theme='dark'] {
+  --bg-main: #0f0d15;
+  --bg-soft: #171320;
+  --surface: rgba(255, 255, 255, 0.055);
+  --surface-strong: rgba(255, 255, 255, 0.09);
+  --border-soft: rgba(196, 181, 253, 0.18);
+
+  --text-main: #f8f5ff;
+  --text-muted: #c9c0df;
+
+  --primary: #a78bfa;
+  --primary-strong: #8b5cf6;
+  --primary-soft: #c4b5fd;
+
+  --accent: #f0abfc;
+  --accent-soft: rgba(240, 171, 252, 0.16);
+
+  --shadow-glow: 0 0 60px rgba(167, 139, 250, 0.22);
+}
+
+html[data-theme='light'] {
+  --bg-main: #f8f5ff;
+  --bg-soft: #ffffff;
+  --surface: rgba(139, 92, 246, 0.08);
+  --surface-strong: rgba(139, 92, 246, 0.12);
+  --border-soft: rgba(124, 58, 237, 0.18);
+
+  --text-main: #1e1b2e;
+  --text-muted: #5b526d;
+
+  --primary: #7c3aed;
+  --primary-strong: #6d28d9;
+  --primary-soft: #8b5cf6;
+
+  --accent: #c026d3;
+  --accent-soft: rgba(192, 38, 211, 0.12);
+
+  --shadow-glow: 0 0 50px rgba(124, 58, 237, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/*
+  Esta clase permite que los cambios de tema se sientan suaves.
+*/
+* {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}

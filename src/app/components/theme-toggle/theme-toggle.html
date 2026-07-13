@@ -1,0 +1,12 @@
+<button
+    type="button"
+    (click)="themeService.toggleTheme()"
+    class="inline-flex h-10 w-10 item-center justify-center rounded-full border border-[var(--border-soft)] bg-[var(--surface)] text-[var(--text-main)] shadow-sm hover:bg-[var(--surface-strong)]"
+    aria-label="Cambiar tema"
+>
+    @if (themeService.currentTheme() === 'dark') {
+        <span class="text-lg">☀️</span>
+    } @else {
+        <span class="text-lg">🌙</span>
+    }
+</button>

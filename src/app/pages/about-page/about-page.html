@@ -1,0 +1,102 @@
+<main class="mx-auto max-w-7xl px-5 pb-20 pt-32">
+  <section class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+    <div>
+      <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+        Sobre mí
+      </p>
+
+      <h1 class="mt-4 text-4xl font-black leading-tight md:text-6xl">
+        Desarrollador web en formación con enfoque empresarial.
+      </h1>
+    </div>
+
+    <div class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-7">
+      <p class="leading-8 text-[var(--text-muted)]">
+        Soy Breiner Daniel Durán Cárdenas, estudiante de Ingeniería de Sistemas
+        con interés en el desarrollo web, bases de datos, backend empresarial y
+        construcción de aplicaciones modernas.
+      </p>
+
+      <p class="mt-5 leading-8 text-[var(--text-muted)]">
+        Me enfoco en crear soluciones funcionales, organizadas y mantenibles,
+        usando tecnologías como Angular, TypeScript, Laravel, PHP, MySQL,
+        Tailwind CSS y Git.
+      </p>
+
+      <p class="mt-5 leading-8 text-[var(--text-muted)]">
+        Mi objetivo es fortalecerme como desarrollador full stack, participando
+        en proyectos reales donde pueda aplicar buenas prácticas, lógica de
+        negocio y diseño de interfaces claras.
+      </p>
+    </div>
+  </section>
+
+  <section class="mt-16">
+    <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+      Enfoque profesional
+    </p>
+
+    <div class="mt-6 grid gap-5 md:grid-cols-3">
+      <article class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6">
+        <h2 class="text-xl font-black">
+          Backend empresarial
+        </h2>
+
+        <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+          Desarrollo de lógica de negocio, APIs, autenticación, servicios,
+          modelos y conexión con bases de datos.
+        </p>
+      </article>
+
+      <article class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6">
+        <h2 class="text-xl font-black">
+          Frontend moderno
+        </h2>
+
+        <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+          Construcción de interfaces limpias, responsivas y organizadas usando
+          Angular, TypeScript y Tailwind CSS.
+        </p>
+      </article>
+
+      <article class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6">
+        <h2 class="text-xl font-black">
+          Bases de datos
+        </h2>
+
+        <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+          Diseño y consulta de estructuras relacionales con MySQL para sistemas
+          administrativos y aplicaciones web.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="mt-16">
+    <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+      Formación
+    </p>
+
+    <div class="mt-6 grid gap-5 md:grid-cols-2">
+      @for (item of educationItems; track item.title) {
+        <article class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6">
+          <span class="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--primary)]">
+            {{ item.status }}
+          </span>
+
+          <h2 class="mt-5 text-xl font-black">
+            {{ item.title }}
+          </h2>
+
+          <p class="mt-2 text-sm font-semibold text-[var(--primary)]">
+            {{ item.institution }}
+          </p>
+
+          <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+            {{ item.description }}
+          </p>
+        </article>
+      }
+    </div>
+  </section>
+</main>

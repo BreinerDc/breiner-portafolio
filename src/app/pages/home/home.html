@@ -1,0 +1,244 @@
+
+<main class="overflow-hidden">
+  <!-- HERO PRINCIPAL -->
+  <section class="relative mx-auto flex min-h-screen max-w-7xl items-center px-5 pb-16 pt-28">
+    <div class="absolute left-1/2 top-20 -z-10 h-80 w-80 -translate-x-1/2 rounded-full bg-[var(--primary)]/20 blur-3xl"></div>
+    <div class="absolute right-10 top-48 -z-10 h-64 w-64 rounded-full bg-[var(--accent)]/15 blur-3xl"></div>
+
+    <div class="grid w-full items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div>
+        <div class="mb-6 inline-flex rounded-full border border-[var(--border-soft)] bg-[var(--surface)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
+          Desarrollador Web
+        </div>
+
+        <h1 class="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight md:text-7xl lg:text-8xl">
+          Construyo
+          <span class="text-[var(--primary)]">experiencias</span>
+          digitales modernas.
+        </h1>
+
+        <p class="mt-7 max-w-2xl text-lg leading-8 text-[var(--text-muted)]">
+          Soy estudiante de Ingeniería de Sistemas enfocado en desarrollo web,
+          aplicaciones empresariales, backend con Laravel, bases de datos MySQL
+          y frontend moderno con Angular.
+        </p>
+
+        <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+          <a
+            routerLink="/proyectos"
+            class="rounded-full bg-[var(--primary)] px-6 py-3 text-center text-sm font-bold text-white shadow-[var(--shadow-glow)] hover:bg-[var(--primary-strong)]"
+          >
+            Ver proyectos
+          </a>
+
+          <a
+            href="/cv-breiner-duran.pdf"
+            class="rounded-full border border-[var(--border-soft)] px-6 py-3 text-center text-sm font-bold text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
+          >
+            Descargar CV
+          </a>
+        </div>
+
+        <div class="mt-12 grid max-w-xl grid-cols-3 gap-4">
+          <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-4">
+            <p class="text-2xl font-black text-[var(--primary)]">Web</p>
+            <p class="mt-1 text-xs text-[var(--text-muted)]">Área principal</p>
+          </div>
+
+          <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-4">
+            <p class="text-2xl font-black text-[var(--primary)]">Full</p>
+            <p class="mt-1 text-xs text-[var(--text-muted)]">Enfoque stack</p>
+          </div>
+
+          <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-4">
+            <p class="text-2xl font-black text-[var(--primary)]">SQL</p>
+            <p class="mt-1 text-xs text-[var(--text-muted)]">Base de datos</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA VISUAL DERECHA -->
+      <div class="relative mx-auto w-full max-w-md">
+        <div class="absolute -inset-6 rounded-[3rem] bg-[var(--primary)]/20 blur-3xl"></div>
+
+        <div class="relative rounded-[2.5rem] border border-[var(--border-soft)] bg-[var(--surface)] p-6 shadow-[var(--shadow-glow)] backdrop-blur">
+          <div class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--bg-soft)] p-6">
+            <div class="mb-10 flex items-center justify-between">
+              <div>
+                <p class="text-xs uppercase tracking-[0.28em] text-[var(--primary)]">
+                  Portfolio
+                </p>
+                <h2 class="mt-2 text-3xl font-black">
+                  Breiner Durán
+                </h2>
+              </div>
+
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--accent-soft)] text-xl font-black text-[var(--primary)]">
+                &lt;/&gt;
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5">
+                <p class="text-sm text-[var(--text-muted)]">Frontend</p>
+                <p class="mt-1 text-xl font-bold">Angular + Tailwind</p>
+              </div>
+
+              <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5">
+                <p class="text-sm text-[var(--text-muted)]">Backend</p>
+                <p class="mt-1 text-xl font-bold">Laravel + MySQL</p>
+              </div>
+
+              <div class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5">
+                <p class="text-sm text-[var(--text-muted)]">Nivel general</p>
+                <p class="mt-1 text-xl font-bold text-[var(--primary)]">Intermedio</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK TECNOLÓGICO -->
+  <section id="stack" class="mx-auto max-w-7xl px-5 py-20">
+    <div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+          Tecnologías que uso
+        </p>
+
+        <h2 class="mt-3 text-3xl font-black md:text-5xl">
+          
+          Stack tecnológico
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      @for (tech of mainTechnologies; track tech.name) {
+        <article class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5 hover:-translate-y-1 hover:border-[var(--primary)]">
+          <div class="mb-6 flex items-start justify-between gap-4">
+            <i [class]="'text-5xl ' + tech.icon"></i>
+
+            <span class="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--primary)]">
+              {{ tech.level }}
+            </span>
+          </div>
+
+          <h3 class="text-xl font-black">
+            {{ tech.name }}
+          </h3>
+
+          <p class="mt-2 text-sm text-[var(--text-muted)]">
+            {{ tech.category }}
+          </p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <!-- PROYECTOS DESTACADOS -->
+  <section id="proyectos" class="mx-auto max-w-7xl px-5 py-20">
+    <div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+          Proyectos
+        </p>
+
+        <h2 class="mt-3 text-3xl font-black md:text-5xl">
+          Trabajos destacados
+        </h2>
+      </div>
+
+      <a
+        href="#"
+        class="w-fit rounded-full border border-[var(--border-soft)] px-5 py-3 text-sm font-bold hover:border-[var(--primary)] hover:text-[var(--primary)]"
+      >
+        Ver todos
+      </a>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-3">
+      @for (project of projects; track project.title) {
+        <article class="rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] p-5 hover:-translate-y-1 hover:border-[var(--primary)]">
+          <div class="mb-5 flex h-44 items-center justify-center rounded-[1.5rem] border border-[var(--border-soft)] bg-[var(--bg-soft)]">
+            <span class="text-4xl font-black text-[var(--primary)]">
+              {{ project.title.charAt(0) }}
+            </span>
+          </div>
+
+          <span class="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--primary)]">
+            {{ project.status }}
+          </span>
+
+          <h3 class="mt-4 text-xl font-black">
+            {{ project.title }}
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+            {{ project.description }}
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            @for (technology of project.technologies; track technology) {
+              <span class="rounded-full border border-[var(--border-soft)] px-3 py-1 text-xs text-[var(--text-muted)]">
+                {{ technology }}
+              </span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <!-- CONTACTO RESUMIDO -->
+  <section id="contacto" class="mx-auto max-w-7xl px-5 py-20">
+    <div class="grid overflow-hidden rounded-[2rem] border border-[var(--border-soft)] bg-[var(--surface)] md:grid-cols-[0.8fr_1.2fr]">
+      <div class="bg-[var(--accent-soft)] p-8 md:p-10">
+        <p class="text-xs font-bold uppercase tracking-[0.28em] text-[var(--primary)]">
+          Contacto
+        </p>
+
+        <h2 class="mt-4 text-3xl font-black md:text-5xl">
+          Construyamos algo profesional.
+        </h2>
+
+        <p class="mt-5 text-sm leading-7 text-[var(--text-muted)]">
+          Estoy abierto a prácticas, proyectos académicos, colaboraciones y
+          oportunidades relacionadas con desarrollo web.
+        </p>
+      </div>
+
+      <div class="p-8 md:p-8">
+        <div class="grid gap-4 md:grid-cols-2">
+          <a
+            href="mailto:breinerdanieldurancardenas@gmail.com"
+            class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5 hover:border-[var(--primary)]"
+          >
+            <p class="text-sm text-[var(--text-muted)]">Correo</p>
+            <p class="mt-2 font-bold">breinerdanieldurancardenas&#64;gmail.com</p>
+          </a>
+
+          <a
+            href="https://github.com/"
+            target="_blank"
+            class="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface)] p-5 hover:border-[var(--primary)]"
+          >
+            <p class="text-sm text-[var(--text-muted)]">GitHub</p>
+            <p class="mt-2 font-bold">Ver repositorios</p>
+          </a>
+        </div>
+
+        <div class="mt-6">
+          <a
+            href="mailto:breinerduran91@gmail.com"
+            class="inline-flex rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-bold text-white hover:bg-[var(--primary-strong)]"
+          >
+            Enviar mensaje
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
